@@ -1,0 +1,128 @@
+<html>
+<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+
+
+<style>
+
+#chien
+{
+width: 8%;
+height: 8%;
+position:absolute;
+}
+
+#mapligne1, #mapligne2, #mapligne3
+{
+	display:flex;
+	flex-wrap: nowrap;
+	width:100%;
+	height:10%;
+	
+
+}
+
+.casevide
+{
+	border: 1px groove black;
+	width: 10%;
+	height:100%;
+}
+
+.casepleine
+{
+border: 1px groove white;
+	width: 10%;
+	height:100%;
+	background-color: black;
+}
+
+</style>
+
+
+<body>
+
+
+<img id="chien" src="chien.png">
+
+<div id="mapligne1">
+<div class="casevide"></div>
+<div class="casevide"></div>
+<div class="casevide"></div>
+<div class="casevide"></div>
+
+
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+</div>
+
+<div id="mapligne2">
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casevide"></div>
+<div class="casevide"></div>
+
+
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+</div>
+
+<div id="mapligne3">
+<div class="casevide"></div>
+<div class="casevide"></div>
+<div class="casevide"></div>
+<div class="casevide"></div>
+
+
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+<div class="casepleine"></div>
+</div>
+
+
+
+
+
+<script>
+	
+
+
+
+
+	$("body").on("keydown", function( event ){ toucheClavier(event) } );
+
+
+	function toucheClavier(event)
+	{
+
+		if(event.which == '37'){ $("#chien").css("right", "+=10%")}
+		if(event.which == '39'){ $("#chien").css("right", "-=10%")}
+		if(event.which == '38'){ $("#chien").css("top", "-=10%")}
+		if(event.which == '40'){ $("#chien").css("top", "+=10%")}
+
+	}
+
+
+	
+
+
+	
+
+
+</script>
+
+</body>
+</html>
